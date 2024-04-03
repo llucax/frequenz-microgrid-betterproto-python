@@ -1,0 +1,44 @@
+{
+  "cookiecutter": {
+    "Introduction": "",
+    "type": "lib",
+    "name": "microgrid-betterproto",
+    "description": "Bindings to the microgrid API generated using betterproto",
+    "title": "Frequenz Microgrid API Python Bindings",
+    "keywords": "microgrid,api,bindings,python,betterproto,proto,grpc,protobuf",
+    "github_org": "frequenz-floss",
+    "license": "MIT",
+    "author_name": "Frequenz Energy-as-a-Service GmbH",
+    "author_email": "floss@frequenz.com",
+    "python_package": "frequenz.api.microgrid",
+    "pypi_package_name": "frequenz-microgrid-betterproto",
+    "github_repo_name": "frequenz-microgrid-betterproto-python",
+    "default_codeowners": "(like @some-org/some-team; defaults to a team based on the repo type)",
+    "_template": "gh:frequenz-floss/frequenz-repo-config-python"
+  },
+  "_cookiecutter": {
+    "Introduction": "{{cookiecutter | introduction}}",
+    "type": [
+      "actor",
+      "api",
+      "app",
+      "lib",
+      "model"
+    ],
+    "name": null,
+    "description": null,
+    "title": "{{cookiecutter | proj_title}}",
+    "keywords": "(comma separated: 'frequenz', <type> and <name> are included automatically)",
+    "github_org": "frequenz-floss",
+    "license": [
+      "MIT",
+      "Proprietary"
+    ],
+    "author_name": "Frequenz Energy-as-a-Service GmbH",
+    "author_email": "floss@frequenz.com",
+    "python_package": "{{cookiecutter | python_package}}",
+    "pypi_package_name": "{{cookiecutter | pypi_package_name}}",
+    "github_repo_name": "{{cookiecutter | github_repo_name}}",
+    "default_codeowners": "(like @some-org/some-team; defaults to a team based on the repo type)"
+  }
+}
