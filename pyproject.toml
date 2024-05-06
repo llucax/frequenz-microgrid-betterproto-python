@@ -5,7 +5,7 @@
 requires = [
   "setuptools == 68.1.0",
   "setuptools_scm[toml] == 7.1.0",
-  "frequenz-repo-config[lib] == 0.9.1",
+  "setuptools-betterproto == 0.1.0",
 ]
 build-backend = "setuptools.build_meta"
 
@@ -38,7 +38,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 requires-python = ">= 3.11, < 4"
-dependencies = ["typing-extensions >= 4.5.0, < 5"]
+dependencies = ["betterproto == 2.0.0b6", "typing-extensions >= 4.5.0, < 5"]
 dynamic = ["version"]
 
 [[project.authors]]
@@ -159,7 +159,7 @@ namespace_packages = true
 # used but getting the original ignored error when removing the type: ignore.
 # See for example: https://github.com/python/mypy/issues/2960
 #no_incremental = true
-packages = ["frequenz.api.microgrid"]
+packages = ["frequenz.microgrid.betterproto"]
 strict = true
 
 [[tool.mypy.overrides]]
@@ -168,3 +168,11 @@ ignore_missing_imports = true
 
 [tool.setuptools_scm]
 version_scheme = "post-release"
+
+[tool.setuptools_betterproto]
+proto_path = "frequenz-api-microgrid/proto"
+out_dir = "src/frequenz/microgrid/betterproto"
+include_paths = [
+  "frequenz-api-microgrid/submodules/api-common-protos",
+  "frequenz-api-microgrid/submodules/frequenz-api-common/proto",
+]
