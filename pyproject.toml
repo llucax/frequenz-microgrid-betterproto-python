@@ -15,21 +15,19 @@ description = "Bindings to the microgrid API generated using betterproto"
 readme = "README.md"
 license = { text = "MIT" }
 keywords = [
+  "api",
+  "betterproto",
+  "bindings",
   "frequenz",
-  "python",
+  "grpc",
   "lib",
   "library",
-  "microgrid-betterproto",
   "microgrid",
-  "api",
-  "bindings",
-  "python",
-  "betterproto",
   "proto",
-  "grpc",
   "protobuf",
+  "python",
+  "rpc",
 ]
-# TODO(cookiecutter): Remove and add more classifiers if appropriate
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
