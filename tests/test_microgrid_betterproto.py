@@ -2,17 +2,12 @@
 # Copyright © 2024 Frequenz Energy-as-a-Service GmbH
 
 """Tests for the frequenz.api.microgrid package."""
-import pytest
 
-from frequenz.api.microgrid import delete_me
-
-
-def test_microgrid_betterproto_succeeds() -> None:  # TODO(cookiecutter): Remove
-    """Test that the delete_me function succeeds."""
-    assert delete_me() is True
+from frequenz.microgrid.betterproto.frequenz.api import microgrid
 
 
-def test_microgrid_betterproto_fails() -> None:  # TODO(cookiecutter): Remove
-    """Test that the delete_me function fails."""
-    with pytest.raises(RuntimeError, match="This function should be removed!"):
-        delete_me(blow_up=True)
+def test_microgrid_betterproto_generated_something() -> None:
+    """Test that the generated betterproto code is importable."""
+    c = microgrid.Component(id=1, name="test")
+    assert c.id == 1
+    assert c.name == "test"
