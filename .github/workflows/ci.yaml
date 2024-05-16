@@ -50,7 +50,7 @@ jobs:
           submodules: recursive
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
           cache: 'pip'
@@ -137,7 +137,7 @@ jobs:
       # https://github.com/docker/build-push-action/issues/252
       # https://github.com/moby/buildkit/issues/1896
       - name: Cache container layers
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: /tmp/.buildx-cache
           key: ${{ runner.os }}-buildx-nox-${{ matrix.arch }}-${{ matrix.os }}-${{ matrix.python }}
@@ -162,7 +162,7 @@ jobs:
 
       # Cache pip downloads
       - name: Cache pip downloads
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: /tmp/pip-cache
           key: nox-${{ matrix.nox-session }}-${{ matrix.arch }}-${{ matrix.os }}-${{ matrix.python }}-${{ hashFiles('pyproject.toml') }}
@@ -225,7 +225,7 @@ jobs:
           submodules: recursive
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
           cache: 'pip'
@@ -240,7 +240,7 @@ jobs:
         run: python -m build
 
       - name: Upload distribution files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist-packages
           path: dist/
@@ -254,7 +254,7 @@ jobs:
       - name: Fetch sources
         uses: actions/checkout@v4
       - name: Download package
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist-packages
           path: dist
@@ -285,7 +285,7 @@ jobs:
         uses: frequenz-floss/setup-git-user@v2
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
           cache: 'pip'
@@ -304,7 +304,7 @@ jobs:
           mike set-default $MIKE_VERSION
 
       - name: Upload site
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: docs-site
           path: site/
@@ -327,7 +327,7 @@ jobs:
         uses: frequenz-floss/setup-git-user@v2
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
           cache: 'pip'
@@ -394,7 +394,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Download distribution files
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist-packages
           path: dist
@@ -440,7 +440,7 @@ jobs:
       id-token: write
     steps:
       - name: Download distribution files
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist-packages
           path: dist
