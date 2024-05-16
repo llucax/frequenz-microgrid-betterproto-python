@@ -13,4 +13,4 @@ recursive-exclude tests *
 recursive-include frequenz-api-microgrid/proto *.proto
 recursive-include frequenz-api-microgrid/submodules/frequenz-api-common/proto *.proto
 recursive-include frequenz-api-microgrid/submodules/api-common-protos *.proto
-recursive-include py *.pyi
+recursive-include src *.pyi

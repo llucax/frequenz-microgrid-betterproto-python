@@ -9,7 +9,7 @@ copyright: "Copyright © 2024 Frequenz Energy-as-a-Service GmbH"
 repo_name: "frequenz-microgrid-betterproto"
 repo_url: "https://github.com/frequenz-floss/frequenz-microgrid-betterproto-python"
 edit_uri: "edit/v0.x.x/docs/"
-strict: true  # Treat warnings as errors
+strict: false  # Some stuff coming from betterproto/google has warnings
 
 # Build directories
 theme:
@@ -93,7 +93,7 @@ plugins:
   - literate-nav:
       nav_file: SUMMARY.md
   - mike:
-      alias_type: redirect
+      alias_type: symlink
       canonical_version: latest
   - mkdocstrings:
       default_handler: python
@@ -110,6 +110,7 @@ plugins:
             show_root_members_full_path: true
             show_signature_annotations: true
             show_source: true
+            show_symbol_type_toc: true
             signature_crossrefs: true
           import:
             # See https://mkdocstrings.github.io/python/usage/#import for details

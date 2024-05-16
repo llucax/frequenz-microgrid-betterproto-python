@@ -6,9 +6,9 @@
 
 ## Introduction
 
-Bindings to the microgrid API generated using betterproto
+Bindings to the [microgrid API] generated using [betterproto].
 
-TODO(cookiecutter): Improve the README file
+Versions of this package matches the version of the API it is generated from.
 
 ## Supported Platforms
 
@@ -22,3 +22,6 @@ The following platforms are officially supported (tested):
 
 If you want to know how to build this project and contribute to it, please
 check out the [Contributing Guide](CONTRIBUTING.md).
+
+[betterproto]: https://test-betterproto.readthedocs.io/en/docs/index.html
+[microgrid API]: https://frequenz-floss.github.io/frequenz-api-microgrid/
