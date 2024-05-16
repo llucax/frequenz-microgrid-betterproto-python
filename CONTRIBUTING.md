@@ -35,6 +35,29 @@ nox
 You can also use `nox -R` to reuse the current testing environment to speed up
 test at the expense of a higher chance to end up with a dirty test environment.
 
+### Updating to a new version of the API
+
+If you want to update the API bindings to a new version of the API, you can
+update the `frequenz-api-microgrid` submodule and the `RELEASE_NOTES.md` file:
+
+```sh
+new_version="v0.0.1"  # for example
+cd frequenz-api-microgrid
+git fetch
+git checkout "$new_version"
+git submodule update --init --recursive
+cd ..
+vi RELEASE_NOTES.md  # Update the link to the API release
+```
+
+Then you can commit the changes:
+
+```sh
+git commit -a -s -m "Bump frequenz-api-microgrid to $new_version"
+```
+
+Then you can create a PR as usual.
+
 ### Running tests / checks individually
 
 For a better development test cycle you can install the runtime and test
