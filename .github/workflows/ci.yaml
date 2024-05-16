@@ -293,7 +293,7 @@ jobs:
       - name: Install build dependencies
         run: |
           python -m pip install -U pip
-          python -m pip install .[dev-mkdocs]
+          python -m pip install -e .[dev-mkdocs]
           python -m pip freeze
 
       - name: Generate the documentation
