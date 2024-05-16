@@ -176,7 +176,7 @@ version_scheme = "post-release"
 
 [tool.setuptools_betterproto]
 proto_path = "frequenz-api-microgrid/proto"
-out_dir = "src/frequenz/microgrid/betterproto"
+out_path = "src/frequenz/microgrid/betterproto"
 include_paths = [
   "frequenz-api-microgrid/submodules/api-common-protos",
   "frequenz-api-microgrid/submodules/frequenz-api-common/proto",
