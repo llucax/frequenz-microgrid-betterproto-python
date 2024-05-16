@@ -294,7 +294,7 @@ jobs:
         run: |
           python -m pip install -U pip
           python -m pip install .[dev-mkdocs]
-          pip freeze
+          python -m pip freeze
 
       - name: Generate the documentation
         env:
