@@ -1,6 +1,6 @@
 exclude .cookiecutter-replay.json
 exclude .editorconfig
-exclude .gitignore
+exclude .git*
 exclude CODEOWNERS
 exclude CONTRIBUTING.md
 exclude mkdocs.yml
