@@ -8,17 +8,17 @@
     ]
   },
   {
+    "version": "v0.17-dev",
+    "title": "v0.17-dev (30dfa9a)",
+    "aliases": []
+  },
+  {
     "version": "v0.17",
     "title": "v0.17.0",
     "aliases": [
       "latest",
       "v0"
     ]
-  },
-  {
-    "version": "v0.17-dev",
-    "title": "v0.17-dev (30dfa9a)",
-    "aliases": []
   },
   {
     "version": "v0.16",
