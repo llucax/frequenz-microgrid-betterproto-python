@@ -2,10 +2,7 @@
   {
     "version": "v0.18-dev",
     "title": "v0.18-dev (8cf44cb)",
-    "aliases": [
-      "latest-dev",
-      "v0-dev"
-    ]
+    "aliases": []
   },
   {
     "version": "v0.17",
@@ -24,5 +21,13 @@
     "version": "v0.15",
     "title": "v0.15.3",
     "aliases": []
+  },
+  {
+    "version": "v0.0-dev",
+    "title": "v0.0-dev (ee5b39b)",
+    "aliases": [
+      "latest-dev",
+      "v0-dev"
+    ]
   }
 ]
