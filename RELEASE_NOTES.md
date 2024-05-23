@@ -1,3 +1,5 @@
 # Frequenz Microgrid API Python Bindings Release Notes
 
-This version corresponds to https://github.com/frequenz-floss/frequenz-api-microgrid/releases/tag/v0.17.0.
+## Bug Fixes
+
+Fix a packaging issue resulting in the generated files not being included.
